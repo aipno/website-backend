@@ -19,7 +19,6 @@ class ObjectSerializer(serializers.ModelSerializer):
             return obj.file_field.url
         return None
 
-    @staticmethod
     def get_file_size(self, obj):
         """获取文件大小"""
         if obj.file_field and hasattr(obj.file_field, 'size'):
